@@ -11,6 +11,25 @@ const store = createStore(function (state,action) {
     }
     return state;
 },{
+    posts: [],
+    friends: [],
+    todos: [
+        {
+            id: Math.random(),
+            text: "Learn Js",
+            isCompleted: false
+        },
+        {
+            id: Math.random(),
+            text: "Learn React js",
+            isCompleted: false
+        },
+        {
+            id: Math.random(),
+            text: "Learn Node js",
+            isCompleted: false
+        }
+    ],
     currentUser: {
         name: "Mike Tayson"
     }
