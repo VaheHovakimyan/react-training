@@ -1,16 +1,48 @@
-import { createStore } from "redux";
+import { combineReducers,createStore } from "redux";
 
-const store = createStore(function (state,action) {
+function currentUserReducer(state = {},action) {
     if (action.type === "edit-current-user-name") {
         return {
             ...state,
-            currentUser: {
-                name: action.payload.name
-            }
+            name: action.payload.name
         };
     }
     return state;
-},{
+}
+
+function todosReducer(state = [],action) {
+    if (action.type === "todo-add") {
+        return {
+            ...state,
+            text: action.payload.text
+        };
+    }
+    return state;
+}
+
+const store = createStore(combineReducers({
+    currentUser: currentUserReducer,
+    todos: todosReducer
+}),{
+    posts: [],
+    friends: [],
+    todos: [
+        {
+            id: Math.random(),
+            text: "Learn Js",
+            isCompleted: false
+        },
+        {
+            id: Math.random(),
+            text: "Learn Js",
+            isCompleted: false
+        },
+        {
+            id: Math.random(),
+            text: "Learn Js",
+            isCompleted: false
+        }
+    ],
     currentUser: {
         name: "Mike Tayson"
     }
