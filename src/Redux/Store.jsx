@@ -1,3 +1,5 @@
+//  This is a comment
+
 import { combineReducers,createStore } from "redux";
 
 function currentUserReducer(state = {},action) {
