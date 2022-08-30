@@ -15,7 +15,7 @@ function todosReducer(state = [],action) {
         return {
             ...state,
             text: action.payload.text
-        };
+        }
     }
     return state;
 }
