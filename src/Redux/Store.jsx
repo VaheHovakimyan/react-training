@@ -1,6 +1,5 @@
-//  This is a comment
+import { combineReducers, createStore } from "redux";
 
-import { combineReducers,createStore } from "redux";
 
 function currentUserReducer(state = {},action) {
     if (action.type === "edit-current-user-name") {
@@ -11,6 +10,7 @@ function currentUserReducer(state = {},action) {
     }
     return state;
 }
+
 
 function todosReducer(state = [],action) {
     if (action.type === "todo-add") {
@@ -25,8 +25,7 @@ function todosReducer(state = [],action) {
 const store = createStore(combineReducers({
     currentUser: currentUserReducer,
     todos: todosReducer
-}),{
-},{
+}), {
     posts: [],
     friends: [],
     todos: [

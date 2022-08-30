@@ -1,7 +1,5 @@
 import { useSelector,useDispatch } from 'react-redux';
 
-
-
 function App() {
 
   const name = useSelector((state) => {
