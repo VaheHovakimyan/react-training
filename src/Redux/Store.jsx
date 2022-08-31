@@ -1,7 +1,7 @@
 import { combineReducers, createStore } from "redux";
 
 
-function currentUserReducer(state = {},action) {
+function currentUserReducer(state = {}, action) {
     if (action.type === "edit-current-user-name") {
         return {
             ...state,
@@ -12,7 +12,7 @@ function currentUserReducer(state = {},action) {
 }
 
 
-function todosReducer(state = [],action) {
+function todosReducer(state = [], action) {
     if (action.type === "todo-add") {
         return {
             ...state,
@@ -21,6 +21,7 @@ function todosReducer(state = [],action) {
     }
     return state;
 }
+
 
 const store = createStore(combineReducers({
     currentUser: currentUserReducer,
