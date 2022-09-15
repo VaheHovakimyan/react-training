@@ -1,31 +1,18 @@
-export function todosReducer(state = [], action) {
-    if (action.type === "todo-add") {
+export function todosReducer(state = {}, action) {
+    if (action.type === "todo_add") {
         return {
             ...state,
             text: action.payload.text
-        }
+        };
     }
+
     return state;
 }
 
 
-export const initialTodos = [
-    {
-        id: Math.random(),
-        text: "Learn Js",
-        isCompleted: false
-    },
-    {
-        id: Math.random(),
-        text: "Learn React js",
-        isCompleted: false
-    },
-    {
-        id: Math.random(),
-        text: "Learn Node js",
-        isCompleted: false
-    }
-];
+export const initialTodos = {
+    text: "Learn Js"
+}
 
 
 export function SelectTodos(state) {
@@ -35,7 +22,7 @@ export function SelectTodos(state) {
 
 export function editText(newText) {
     return {
-        type: "todo-add",
+        type: "todo_add",
         payload: {
             name: newText
         }

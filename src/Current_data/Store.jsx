@@ -13,4 +13,5 @@ const store = createStore(combineReducers({
     currentUser: initialCurrentUser
 })
 
-export default store; 
+
+export default store;

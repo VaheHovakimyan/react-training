@@ -20,6 +20,7 @@ function App() {
           dispatch(editName(evt.target.value))
         }}
       />
+                              
       <h1>Text: {text}</h1>
       <input
         type="text"

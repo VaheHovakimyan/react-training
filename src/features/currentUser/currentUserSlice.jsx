@@ -5,6 +5,7 @@ export function currentUserReducer(state = {}, action) {
             name: action.payload.name
         };
     }
+    
     return state;
 }
 
