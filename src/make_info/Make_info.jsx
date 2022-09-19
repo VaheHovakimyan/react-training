@@ -2,7 +2,7 @@
 
 export default function Make_info(){
     return(
-         <div>
+         <div> 
             Make_info
          </div>
     )
