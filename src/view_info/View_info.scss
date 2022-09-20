@@ -1,0 +1,17 @@
+.view_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45vw;
+    height: 100vh;
+    background-color: darkgreen;
+    margin: 0;
+
+    .view_info_resume {
+        width: 35vw;
+        height: 80vh;
+        background-color: brown;
+        border: 2px black solid;
+        border-radius: 4px;
+    }
+}
