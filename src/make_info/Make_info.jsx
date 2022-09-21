@@ -8,11 +8,11 @@ export default function Make_info() {
     const dispatch = useDispatch();
 
     const name = useSelector((state) => {
-        return state.personal_info.name
+        return state.name.name
     });
 
     const surname = useSelector((state) => {
-        return state.personal_info.surname
+        return state.surname.surname
     })
 
     return (
@@ -70,7 +70,7 @@ export default function Make_info() {
                         onChange={(evt) => {
                             dispatch({
                                 type: "change_name",
-                                payload:{
+                                payload: {
                                     name: evt.target.value
                                 }
                             })
@@ -85,8 +85,8 @@ export default function Make_info() {
                         value={surname}
                         onChange={(evt) => {
                             dispatch({
-                                type: "change_name",
-                                payload:{
+                                type: "change_surname",
+                                payload: {
                                     surname: evt.target.value
                                 }
                             })

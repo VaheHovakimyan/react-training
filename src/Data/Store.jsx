@@ -3,18 +3,24 @@ import { createStore } from "redux";
 
 const store = createStore((state = {}, action) => {
 
-    if(action.type === "change_id"){
-        return{
+    if (action.type === "change_id") {
+        return {
             ...state,
-            header:{
+            background: {
                 background_id: action.payload.background_id
             }
         }
-    }else if(action.type === "change_name"){
-        return{
+    } else if (action.type === "change_name") {
+        return {
             ...state,
-            personal_info:{
-                name: action.payload.name,
+            name: {
+                name: action.payload.name
+            }
+        }
+    } else if (action.type === "change_surname") {
+        return {
+            ...state,
+            surname: {
                 surname: action.payload.surname
             }
         }
@@ -22,15 +28,14 @@ const store = createStore((state = {}, action) => {
 
     return state
 }, {
-    header:{
+    background: {
         background_id: 1
     },
-    personal_info:{
-        name: "",
-        surname: "",
-        e_mail: "",
-        tel_number: "",
-        address: ""
+    name: { 
+        name: "cf"
+    },
+    surname: {
+        surname: "dfvv"
     }
 })
 

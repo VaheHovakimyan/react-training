@@ -1,3 +1,15 @@
+// Templates 
+
+%view_info_resume {
+    width: 35vw;
+    height: 85vh;
+    background-color: brown;
+    border: 2px black solid;
+    border-radius: 4px;
+}
+
+// Scss code
+
 .view_info {
     display: flex;
     justify-content: center;
@@ -7,11 +19,18 @@
     background-color: darkgreen;
     margin: 0;
 
-    .view_info_resume {
-        width: 35vw;
-        height: 80vh;
-        background-color: brown;
-        border: 2px black solid;
-        border-radius: 4px;
+    .view_info_resume_background1 {
+        background-image: url("../Resume_backgrounds/image_1.png");
+        @extend %view_info_resume;
+    }
+
+    .view_info_resume_background2 {
+        background-image: url("../Resume_backgrounds/image_2.png");
+        @extend %view_info_resume;
+    }
+
+    .view_info_resume_background3 {
+        background-image: url("../Resume_backgrounds/image_3.png");
+        @extend %view_info_resume;
     }
 }
