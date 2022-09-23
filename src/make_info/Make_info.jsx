@@ -15,6 +15,18 @@ export default function Make_info() {
         return state.surname.surname
     })
 
+    const mail = useSelector((state) => {
+        return state.mail.mail
+    })
+
+    const tel = useSelector((state) => {
+        return state.tel.tel
+    })
+
+    const address = useSelector((state) => {
+        return state.address.address
+    })
+
     return (
         <div className="make_info">
             <div className='header'>
@@ -88,6 +100,54 @@ export default function Make_info() {
                                 type: "change_surname",
                                 payload: {
                                     surname: evt.target.value
+                                }
+                            })
+                        }}
+                    />
+                </div>
+
+                <div>
+                    <p>Mail</p>
+                    <input
+                        type="text"
+                        value={mail}
+                        onChange={(evt) => {
+                            dispatch({
+                                type: "change_mail",
+                                payload: {
+                                    mail: evt.target.value
+                                }
+                            })
+                        }}
+                    />
+                </div>
+
+                <div>
+                    <p>Tel</p>
+                    <input
+                        type="text"
+                        value={tel}
+                        onChange={(evt) => {
+                            dispatch({
+                                type: "change_tel",
+                                payload: {
+                                    tel: evt.target.value
+                                }
+                            })
+                        }}
+                    />
+                </div>
+
+                <div>
+                    <p>Address</p>
+                    <input
+                        type="text"
+                        value={address}
+                        onChange={(evt) => {
+                            dispatch({
+                                type: "change_add",
+                                payload: {
+                                    address: evt.target.value
                                 }
                             })
                         }}

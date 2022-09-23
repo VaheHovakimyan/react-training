@@ -24,6 +24,27 @@ const store = createStore((state = {}, action) => {
                 surname: action.payload.surname
             }
         }
+    } else if (action.type === "change_mail") {
+        return {
+            ...state,
+            mail: {
+                mail: action.payload.mail
+            }
+        }
+    } else if (action.type === "change_tel") {
+        return {
+            ...state,
+            tel: {
+                tel: action.payload.tel
+            }
+        }
+    } else if (action.type === "change_add") {
+        return {
+            ...state,
+            address: {
+                address: action.payload.address
+            }
+        }
     }
 
     return state
@@ -31,11 +52,20 @@ const store = createStore((state = {}, action) => {
     background: {
         background_id: 1
     },
-    name: { 
-        name: "cf"
+    name: {
+        name: "Vahe"
     },
     surname: {
-        surname: "dfvv"
+        surname: "Hovakimyan"
+    },
+    mail: {
+        mail: "vahe.hovakimyan.19@mail.ru"
+    },
+    tel: {
+        tel: "069-94-89-32"
+    },
+    address: {
+        address: "Town Ejmiatsin, region Armavir, Armenia"
     }
 })
 
