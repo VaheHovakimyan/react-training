@@ -12,8 +12,8 @@ export default function View_address(){
 
     return(
         <div className="view_contact_element">
-            <img src={address_icon} alt="address_icon" width="15px" height="15px"/>
-            <p>{address}</p>
+            <img src={address_icon} alt="address_icon" width="15px" height="15px" className="contact_icon"/>
+            <p className="view_contact_element_text">{address}</p>
         </div>
     )
 }

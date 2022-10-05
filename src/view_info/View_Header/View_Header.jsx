@@ -9,12 +9,14 @@ import './View_Header.scss';
 export default function View_Header() {
     return (
         <div className='view_header'>
-            <View_Person_Image />
-            <div className='name_mail_tel_address'>
-                <View_name_surname />
-                <View_Mail />
-                <View_tel />
-                <View_address />
+            <div className='view_header_div'>
+                <View_Person_Image />
+                <div className='name_mail_tel_address_div'>
+                    <View_name_surname />
+                    <View_Mail />
+                    <View_tel />
+                    <View_address />
+                </div>
             </div>
         </div>
     )

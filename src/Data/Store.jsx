@@ -45,6 +45,13 @@ const store = createStore((state = {}, action) => {
                 address: action.payload.address
             }
         }
+    } else if (action.type === "change_img") {
+        return {
+            ...state,
+            main_image: {
+                main_image: action.payload.main_image
+            }
+        }
     }
 
     return state
@@ -62,10 +69,13 @@ const store = createStore((state = {}, action) => {
         mail: "vahe.hovakimyan.19@mail.ru"
     },
     tel: {
-        tel: "069-94-89-32"
+        tel: "(+374)69-94-89-32, (+374)79-94-89-32"
     },
     address: {
         address: "Town Ejmiatsin, region Armavir, Armenia"
+    },
+    main_image: {
+        main_image: '../../../Resume_backgrounds/image_3.png'
     }
 })
 

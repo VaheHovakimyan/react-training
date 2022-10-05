@@ -27,6 +27,11 @@ export default function Make_info() {
         return state.address.address
     })
 
+    const main_image = useSelector((state) => {
+        return state.main_image.main_image
+    })
+
+
     return (
         <div className="make_info">
             <div className='header'>
@@ -153,6 +158,21 @@ export default function Make_info() {
                         }}
                     />
                 </div>
+
+                {/* <input
+                    type="file"
+                    name="image"
+                    // value=""
+                    onChange={(evt) => {
+                        dispatch({
+                            type: "change_img",
+                            payload: {
+                                main_image: evt.target.value
+                            }
+                        })
+                    }}
+                /> */}
+
 
             </div>
         </div>

@@ -12,8 +12,8 @@ export default function View_Mail(){
 
     return(
         <div className="view_contact_element">
-            <img src={mail_icon} alt="mail_icon" width="15px" height="15px" />
-            <p>{mail}</p>
+            <img src={mail_icon} alt="mail_icon" width="15px" height="15px" className="contact_icon"/>
+            <p className="view_contact_element_text">{mail}</p>
         </div>
     )
 }

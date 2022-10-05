@@ -12,8 +12,8 @@ export default function View_tel() {
 
     return (
         <div className="view_contact_element">
-            <img src={tel_icon} alt="address_icon" width="15px" height="15px" />
-            <p>{tel}</p>
+            <img src={tel_icon} alt="address_icon" width="15px" height="15px" className="contact_icon"/>
+            <p className="view_contact_element_text">{tel}</p>
         </div>
     )
 }
