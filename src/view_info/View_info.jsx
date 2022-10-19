@@ -3,7 +3,7 @@ import View_Header from './View_Header/View_Header';
 import './View_info.scss';
 
 
-export default function View_info() {
+export default function View_info({profileImg, setProfileImg}) {
 
     const background_id = useSelector((state) => {
         return state.background.background_id
@@ -12,7 +12,10 @@ export default function View_info() {
     return (
         <div className='view_info'>
             <div className={`view_info_resume_background${background_id}`}>
-                <View_Header />
+                <View_Header 
+                    profileImg={profileImg}
+                    setProfileImg={setProfileImg}
+                />
             </div>
         </div>
     )

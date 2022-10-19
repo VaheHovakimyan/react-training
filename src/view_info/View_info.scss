@@ -4,7 +4,7 @@
     width: 35vw;
     height: 85vh;
     background-color: brown;
-    border: 2px black solid;
+    border: 1px black solid;
     border-radius: 4px;
 }
 
@@ -33,4 +33,9 @@
         background-image: url("../Resume_backgrounds/image_3.png");
         @extend %view_info_resume;
     }
+
+    // .example{
+    //     width: 120px;
+    //     height: 120px;
+    // }
 }

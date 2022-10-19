@@ -3,7 +3,7 @@ import './Make_info.scss';
 
 
 
-export default function Make_info() {
+export default function Make_info({setProfileImg}) {
 
     const dispatch = useDispatch();
 
@@ -30,6 +30,25 @@ export default function Make_info() {
     const main_image = useSelector((state) => {
         return state.main_image.main_image
     })
+
+    const color_background = useSelector((state) => {
+        return state.color_background.color_background
+    })
+
+
+
+    const ImageHandler = (e) => {
+        const selected = e.target.files[0];
+        const Allowed_types = ["image/png", "image/jpeg", "image/jpg", "image/webp"];
+        if(selected && Allowed_types.includes(selected.type)){
+            let reader = new FileReader();
+            reader.onloadend = () => {
+                setProfileImg(reader.result);
+            };
+            reader.readAsDataURL(selected);
+        }
+    }
+
 
 
     return (
@@ -75,6 +94,28 @@ export default function Make_info() {
                                 })
                             }}
                         >3</div>
+                    </div>
+
+                    <div>
+                        Background on color
+                    </div>
+
+                    <div>
+                        <p>Color</p>
+                        <input
+                            type="color"
+                            name="color"
+                            id="background_color"
+                            value={color_background}
+                            onChange={(evt) => {
+                                dispatch({
+                                    type: "color_change_value",
+                                    payload: {
+                                        color_background: evt.target.value
+                                    }
+                                })
+                            }}
+                        />
                     </div>
 
                 </div>
@@ -159,19 +200,7 @@ export default function Make_info() {
                     />
                 </div>
 
-                {/* <input
-                    type="file"
-                    name="image"
-                    // value=""
-                    onChange={(evt) => {
-                        dispatch({
-                            type: "change_img",
-                            payload: {
-                                main_image: evt.target.value
-                            }
-                        })
-                    }}
-                /> */}
+                <input type="file" name="input" id="input" onChange={ImageHandler} />
 
 
             </div>

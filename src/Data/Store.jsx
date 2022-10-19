@@ -10,6 +10,13 @@ const store = createStore((state = {}, action) => {
                 background_id: action.payload.background_id
             }
         }
+    } else if (action.type === "color_change_value") {
+        return {
+            ...state,
+            color_background: {
+                color_background: action.payload.color_background
+            }
+        }
     } else if (action.type === "change_name") {
         return {
             ...state,
@@ -76,6 +83,9 @@ const store = createStore((state = {}, action) => {
     },
     main_image: {
         main_image: '../../../Resume_backgrounds/image_3.png'
+    },
+    color_background: {
+        color_background: ""
     }
 })
 

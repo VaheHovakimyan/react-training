@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 
 
-export default function View_name_surname(){
+export default function View_name_surname() {
 
     const name = useSelector((state) => {
         return state.name.name
@@ -11,9 +11,9 @@ export default function View_name_surname(){
         return state.surname.surname
     });
 
-    return(
+    return (
         <>
-              <p className='name_surname_text'> {name} {surname}</p>
+            <p className='name_surname_text'> {name} {surname}</p>
         </>
     )
 }
