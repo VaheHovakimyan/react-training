@@ -1,28 +1,65 @@
-.make_info{
-    width: 55vw;
-    height: 100vh;
+.make_info_div {
+    // width: 55vw;
+    // height: 100vh;
     background-color: darkgoldenrod;
     margin: 0;
-    .backgrounds{
-        .background_title_div{
-            width: 35vw;
-            .background_title{
-                font-size: 22px;
-                margin-left: 1vw;
+
+    .make_info {
+        // width: 55vw;
+        height: auto;
+        margin: 0;
+        background-color: darkgoldenrod;
+        // padding-top: 20px;
+        // padding-bottom: 20px;
+
+        .main_settings_close_div {
+            width: 55vw;
+            height: 8vh;
+            background-color: rgb(6, 59, 6);
+            color: white;
+            margin: 0;
+            cursor: pointer;
+
+            .main_settings_title_icon_div {
+                .main_settings_title {
+                    margin: 0px;
+                }
             }
         }
 
-        .backgrounds_items{
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            width: 20vw;
-    
-            .backgrounds_item{
-                width: 70px;
-                height: 70px;
-                background-color: brown;
-                border-radius: 16px;
+
+        .main_settings_open {
+
+            .backgrounds {
+                .background_title_div {
+                    width: 35vw;
+
+                    .background_title {
+                        font-size: 22px;
+                        margin-left: 1vw;
+                    }
+                }
+
+                .backgrounds_items {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    width: 20vw;
+
+                    .backgrounds_item {
+                        width: 70px;
+                        height: 70px;
+                        background-color: brown;
+                        border-radius: 16px;
+                    }
+                }
+            }
+
+            .header_color_select_div {
+                .header_color_select_input {
+                    width: 100px;
+                    height: 100px;
+                }
             }
         }
     }

@@ -8,34 +8,38 @@
     border-radius: 4px;
 }
 
-// Scss code
+// SCSS code
 
-.view_info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45vw;
-    height: 100vh;
-    background-color: darkgreen;
-    margin: 0;
+.view_info_div {
 
-    .view_info_resume_background1 {
-        background-image: url("../Resume_backgrounds/image_1.png");
-        @extend %view_info_resume;
+    // position: fixed;
+    // top: 0%;
+    // left: 55vw;
+    .view_info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45vw;
+        height: 100vh;
+        background-color: darkgreen;
+        margin: 0;
+        position: fixed;
+        top: 0%;
+        left: 55vw;
+
+        .view_info_resume_background1 {
+            background-image: url("../Resume_backgrounds/image_1.png");
+            @extend %view_info_resume;
+        }
+
+        .view_info_resume_background2 {
+            background-image: url("../Resume_backgrounds/image_2.png");
+            @extend %view_info_resume;
+        }
+
+        .view_info_resume_background3 {
+            background-image: url("../Resume_backgrounds/image_3.png");
+            @extend %view_info_resume;
+        }
     }
-
-    .view_info_resume_background2 {
-        background-image: url("../Resume_backgrounds/image_2.png");
-        @extend %view_info_resume;
-    }
-
-    .view_info_resume_background3 {
-        background-image: url("../Resume_backgrounds/image_3.png");
-        @extend %view_info_resume;
-    }
-
-    // .example{
-    //     width: 120px;
-    //     height: 120px;
-    // }
 }

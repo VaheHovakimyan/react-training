@@ -10,7 +10,7 @@ export default function Main() {
 
     return (
         <div className='main'>
-            <Make_info 
+            <Make_info
                 setProfileImg={setProfileImg}
             />
             <View_info 
