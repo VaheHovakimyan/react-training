@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { selectAddress } from "../../../Features/Header/Address_slice";
 import address_icon from '../../../Resume_backgrounds/image_3.png';
 import '../View_Header.scss';
 // import './View_address.scss';
@@ -6,9 +7,11 @@ import '../View_Header.scss';
 
 export default function View_address(){
 
-    const address = useSelector((state) => {
-        return state.address.address
-    })
+    const address = useSelector(selectAddress);
+
+    // const address = useSelector((state) => {
+    //     return state.address.address
+    // })
 
     return(
         <div className="view_contact_element">

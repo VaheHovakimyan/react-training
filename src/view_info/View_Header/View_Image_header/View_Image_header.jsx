@@ -5,13 +5,27 @@ import nkar from "../../../Resume_backgrounds/image_3.png";
 
 export default function View_Person_Image({profileImg, setProfileImg}) {
 
-    const main_image = useSelector((state) => {
-        return state.main_image.main_image
-    })
+    // original
+   
+    // const main_image = useSelector((state) => {
+    //     return state.main_image.main_image
+    // })
 
-    const color_background = useSelector((state) => {
-        return state.color_background.color_background
-    })
+    // const color_background = useSelector((state) => {
+    //     return state.color_background.color_background
+    // })
+
+
+
+
+
+
+
+
+
+
+
+
 
     // const nkar = main_image;
 
@@ -36,13 +50,17 @@ export default function View_Person_Image({profileImg, setProfileImg}) {
 
     return (
         <>
-           
 
+        <div>
+            hdhdh
+        </div>
+           
+{/* 
             <img src={profileImg} width="100px" height="100px" alt="image" />
 
             <div>
                 <label htmlFor="input"></label>
-            </div>
+            </div> */}
 
                 {/* <div className='example' style={{
                     background: color_background

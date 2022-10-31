@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+// import { useDispatch, useSelector } from 'react-redux';
 import Main_settings from './Main_settings/Main_settings';
 import Header from './Header/Header';
 import Experience from './Experience/Experience';
@@ -12,14 +12,12 @@ import './Make_info.scss';
 export default function Make_info({ setProfileImg }) {
 
 
-    const [main_settings, setMain_settings] = useState(false);
-    const [header, setHeader] = useState(false);
-    const [experience, setExperience] = useState(false);
-    const [education, setEducation] = useState(false);
-    const [languages, setLanguages] = useState(false);
+    const [main_settings, setMain_settings] = useState(true);
+    const [header, setHeader] = useState(true);
+    const [experience, setExperience] = useState(true);
+    const [education, setEducation] = useState(true);
+    const [languages, setLanguages] = useState(true);
 
-
-    const dispatch = useDispatch();
 
     // const name = useSelector((state) => {
     //     return state.name.name

@@ -7,13 +7,13 @@ export default function Main_settings() {
 
     const dispatch = useDispatch();
 
-    const main_image = useSelector((state) => {
-        return state.main_image.main_image
-    })
+    // const main_image = useSelector((state) => {
+    //     return state.main_image.main_image
+    // })
 
-    const color_background = useSelector((state) => {
-        return state.color_background.color_background
-    })
+    // const color_background = useSelector((state) => {
+    //     return state.color_background.color_background
+    // })
 
     return (
         <div className='main_settings_open'>
@@ -23,7 +23,7 @@ export default function Main_settings() {
                     <p className='background_title'>Backgrounds</p>
                 </div>
 
-                <div className='backgrounds_items'>
+                {/* <div className='backgrounds_items'>
                     <div className='backgrounds_item'
                         onClick={() => {
                             dispatch({
@@ -79,7 +79,7 @@ export default function Main_settings() {
                             })
                         }}
                     />
-                </div>
+                </div> */}
 
             </div>
 

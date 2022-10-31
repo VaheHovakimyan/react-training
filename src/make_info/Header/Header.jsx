@@ -1,34 +1,43 @@
 import { useDispatch, useSelector } from "react-redux";
-
-
+import { nameValue, selectName } from "../../Features/Header/Name_slice";
+import { surnameValue, selectSurname } from "../../Features/Header/Surname_slice";
+import { mailValue, selectMail } from "../../Features/Header/Mail_slice";
+import { telValue, selectTel } from "../../Features/Header/Tel_slice";
+import { addressValue, selectAddress } from "../../Features/Header/Address_slice";
 
 export default function Header({ ImageHandler }) {
 
     const dispatch = useDispatch();
 
-    const name = useSelector((state) => {
-        return state.name.name
-    });
+    const name = useSelector(selectName);
+    const surname = useSelector(selectSurname);
+    const mail = useSelector(selectMail);
+    const tel = useSelector(selectTel);
+    const address = useSelector(selectAddress);
 
-    const surname = useSelector((state) => {
-        return state.surname.surname
-    })
+    // const name = useSelector((state) => {
+    //     return state.name.name
+    // });
 
-    const mail = useSelector((state) => {
-        return state.mail.mail
-    })
+    // const surname = useSelector((state) => {
+    //     return state.surname.surname
+    // })
 
-    const tel = useSelector((state) => {
-        return state.tel.tel
-    })
+    // const mail = useSelector((state) => {
+    //     return state.mail.mail
+    // })
 
-    const address = useSelector((state) => {
-        return state.address.address
-    })
+    // const tel = useSelector((state) => {
+    //     return state.tel.tel
+    // })
 
-    const main_image = useSelector((state) => {
-        return state.main_image.main_image
-    })
+    // const address = useSelector((state) => {
+    //     return state.address.address
+    // })
+
+    // const main_image = useSelector((state) => {
+    //     return state.main_image.main_image
+    // })
 
 
     return (
@@ -40,14 +49,7 @@ export default function Header({ ImageHandler }) {
                 <input
                     type="text"
                     value={name}
-                    onChange={(evt) => {
-                        dispatch({
-                            type: "change_name",
-                            payload: {
-                                name: evt.target.value
-                            }
-                        })
-                    }}
+                    onChange={(e) => {dispatch(nameValue(e.target.value))}}
                 />
             </div>
 
@@ -56,14 +58,7 @@ export default function Header({ ImageHandler }) {
                 <input
                     type="text"
                     value={surname}
-                    onChange={(evt) => {
-                        dispatch({
-                            type: "change_surname",
-                            payload: {
-                                surname: evt.target.value
-                            }
-                        })
-                    }}
+                    onChange={(e) => {dispatch(surnameValue(e.target.value))}}
                 />
             </div>
 
@@ -72,14 +67,7 @@ export default function Header({ ImageHandler }) {
                 <input
                     type="text"
                     value={mail}
-                    onChange={(evt) => {
-                        dispatch({
-                            type: "change_mail",
-                            payload: {
-                                mail: evt.target.value
-                            }
-                        })
-                    }}
+                    onChange={(e) => {dispatch(mailValue(e.target.value))}}
                 />
             </div>
 
@@ -88,14 +76,7 @@ export default function Header({ ImageHandler }) {
                 <input
                     type="text"
                     value={tel}
-                    onChange={(evt) => {
-                        dispatch({
-                            type: "change_tel",
-                            payload: {
-                                tel: evt.target.value
-                            }
-                        })
-                    }}
+                    onChange={(e) => {dispatch(telValue(e.target.value))}}
                 />
             </div>
 
@@ -104,14 +85,7 @@ export default function Header({ ImageHandler }) {
                 <input
                     type="text"
                     value={address}
-                    onChange={(evt) => {
-                        dispatch({
-                            type: "change_add",
-                            payload: {
-                                address: evt.target.value
-                            }
-                        })
-                    }}
+                    onChange={(e) => {dispatch(addressValue(e.target.value))}}
                 />
             </div>
 

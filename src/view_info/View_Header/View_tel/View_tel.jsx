@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { selectTel } from "../../../Features/Header/Tel_slice";
 import tel_icon from '../../../Resume_backgrounds/image_3.png';
 import '../View_Header.scss';
 // import './View_tel.scss';
@@ -6,9 +7,11 @@ import '../View_Header.scss';
 
 export default function View_tel() {
 
-    const tel = useSelector((state) => {
-        return state.tel.tel
-    })
+    // const tel = useSelector((state) => {
+    //     return state.tel.tel
+    // })
+
+    const tel = useSelector(selectTel); 
 
     return (
         <div className="view_contact_element">
