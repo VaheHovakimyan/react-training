@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import { selectAddress } from "../../../Features/Header/Address_slice";
+import { selectAddress } from "../../../Features/Header/AddressSlice";
 import address_icon from '../../../Resume_backgrounds/image_3.png';
-import '../View_Header.scss';
+import '../ViewHeader.scss';
 // import './View_address.scss';
 
 

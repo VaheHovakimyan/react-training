@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import { selectMail } from "../../../Features/Header/Mail_slice";
+import { selectMail } from "../../../Features/Header/MailSlice";
 import mail_icon from '../../../Resume_backgrounds/image_3.png';
-import '../View_Header.scss';
+import '../ViewHeader.scss';
 // import './View_mail.scss';
 
 

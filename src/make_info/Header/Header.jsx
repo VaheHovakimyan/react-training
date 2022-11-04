@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
-import { nameValue, selectName } from "../../Features/Header/Name_slice";
-import { surnameValue, selectSurname } from "../../Features/Header/Surname_slice";
-import { mailValue, selectMail } from "../../Features/Header/Mail_slice";
-import { telValue, selectTel } from "../../Features/Header/Tel_slice";
-import { addressValue, selectAddress } from "../../Features/Header/Address_slice";
+import { nameValue, selectName } from "../../Features/Header/NameSlice";
+import { surnameValue, selectSurname } from "../../Features/Header/SurnameSlice";
+import { mailValue, selectMail } from "../../Features/Header/MailSlice";
+import { telValue, selectTel } from "../../Features/Header/TelSlice";
+import { addressValue, selectAddress } from "../../Features/Header/AddressSlice";
 
 export default function Header({ ImageHandler }) {
 

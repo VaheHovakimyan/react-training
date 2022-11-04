@@ -1,11 +1,11 @@
 import { useState } from 'react';
 // import { useDispatch, useSelector } from 'react-redux';
-import Main_settings from './Main_settings/Main_settings';
+import Main_settings from './Main_settings/MainSettings';
 import Header from './Header/Header';
 import Experience from './Experience/Experience';
 import Education from './Education/Education'
 import Languages from './Languages/Languages';
-import './Make_info.scss';
+import './MakeInfo.scss';
 
 
 

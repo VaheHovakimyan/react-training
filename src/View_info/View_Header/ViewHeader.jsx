@@ -1,9 +1,9 @@
-import View_name_surname from './View_name_surname/View_name_surname.jsx';
-import View_Image_header from './View_Image_header/View_Image_header.jsx';
-import View_mail from './View_mail/View_mail.jsx';
-import View_tel from './View_tel/View_tel.jsx';
-import View_address from './View_address/View_address.jsx';
-import './View_Header.scss';
+import View_name_surname from './View_name_surname/ViewNameSurname.jsx';
+import View_Image_header from './View_Image_header/ViewImageHeader.jsx';
+import View_mail from './View_mail/ViewMail.jsx';
+import View_tel from './View_tel/ViewTel.jsx';
+import View_address from './View_address/ViewAddress.jsx';
+import './ViewHeader.scss';
 
 
 export default function View_Header({profileImg, setProfileImg}) {

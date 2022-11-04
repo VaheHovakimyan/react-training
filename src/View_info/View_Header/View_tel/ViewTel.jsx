@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import { selectTel } from "../../../Features/Header/Tel_slice";
+import { selectTel } from "../../../Features/Header/TelSlice";
 import tel_icon from '../../../Resume_backgrounds/image_3.png';
-import '../View_Header.scss';
+import '../ViewHeader.scss';
 // import './View_tel.scss';
 
 

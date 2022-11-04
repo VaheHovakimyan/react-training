@@ -1,11 +1,12 @@
 import { useDispatch, useSelector } from "react-redux"
-
+import { selectBackgrounds, backgroundsValue } from "../../Features/Main_settings/BackgroundsSlice";
 
 
 
 export default function Main_settings() {
 
     const dispatch = useDispatch();
+    const main_image = useSelector(selectBackgrounds);
 
     // const main_image = useSelector((state) => {
     //     return state.main_image.main_image
@@ -23,38 +24,19 @@ export default function Main_settings() {
                     <p className='background_title'>Backgrounds</p>
                 </div>
 
-                {/* <div className='backgrounds_items'>
+
+
+                <div className='backgrounds_items'>
                     <div className='backgrounds_item'
-                        onClick={() => {
-                            dispatch({
-                                type: "change_id",
-                                payload: {
-                                    background_id: 1
-                                }
-                            })
-                        }}
+                        onClick={() => { dispatch(backgroundsValue(1) )}}
                     >1</div>
 
                     <div className='backgrounds_item'
-                        onClick={() => {
-                            dispatch({
-                                type: "change_id",
-                                payload: {
-                                    background_id: 2
-                                }
-                            })
-                        }}
+                        onClick={() => { dispatch(backgroundsValue(2) )}}
                     >2</div>
 
                     <div className='backgrounds_item'
-                        onClick={() => {
-                            dispatch({
-                                type: "change_id",
-                                payload: {
-                                    background_id: 3
-                                }
-                            })
-                        }}
+                        onClick={() => { dispatch(backgroundsValue(3) )}}
                     >3</div>
                 </div>
 
@@ -62,7 +44,7 @@ export default function Main_settings() {
                     Background on color
                 </div>
 
-                <div className='header_color_select_div'>
+                {/* <div className='header_color_select_div'>
                     <p>Color</p>
                     <input
                         type="color"
@@ -81,8 +63,9 @@ export default function Main_settings() {
                     />
                 </div> */}
 
+
             </div>
 
-        </div>
+        </div >
     )
 }

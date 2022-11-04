@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
-import { selectName } from "../../../Features/Header/Name_slice";
-import { selectSurname } from '../../../Features/Header/Surname_slice';
+import { selectName } from "../../../Features/Header/NameSlice";
+import { selectSurname } from '../../../Features/Header/SurnameSlice';
 
 export default function View_name_surname() {
 
