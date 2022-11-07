@@ -3,10 +3,10 @@ import { useSelector } from "react-redux";
 import nkar from "../../../Resume_backgrounds/image_3.png";
 
 
-export default function View_Person_Image({profileImg, setProfileImg}) {
+export default function View_Person_Image({ profileImg, setProfileImg }) {
 
     // original
-   
+
     // const main_image = useSelector((state) => {
     //     return state.main_image.main_image
     // })
@@ -14,15 +14,6 @@ export default function View_Person_Image({profileImg, setProfileImg}) {
     // const color_background = useSelector((state) => {
     //     return state.color_background.color_background
     // })
-
-
-
-
-
-
-
-
-
 
 
 
@@ -51,22 +42,22 @@ export default function View_Person_Image({profileImg, setProfileImg}) {
     return (
         <>
 
-        <div>
+            {/* <div>
             hdhdh
-        </div>
-           
-{/* 
+        </div> */}
+
+
             <img src={profileImg} width="100px" height="100px" alt="image" />
 
             <div>
                 <label htmlFor="input"></label>
-            </div> */}
+            </div>
 
-                {/* <div className='example' style={{
+            {/* <div className='example' style={{
                     background: color_background
                 }}></div> */}
-                {/* <img src={nkar} alt="mmmnnn" width="200px" height="200px" /> */}
-            {/* </div> */}
+            {/* <img src={nkar} alt="mmmnnn" width="200px" height="200px" /> */}
+            {/* </div>*/}
         </>
     )
 }

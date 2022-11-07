@@ -1,6 +1,6 @@
 import { useState } from 'react';
 // import { useDispatch, useSelector } from 'react-redux';
-import Main_settings from './Main_settings/MainSettings';
+import Main_settings from './MainSettings/MainSettings';
 import Header from './Header/Header';
 import Experience from './Experience/Experience';
 import Education from './Education/Education'
@@ -49,17 +49,17 @@ export default function Make_info({ setProfileImg }) {
 
 
 
-    const ImageHandler = (e) => {
-        const selected = e.target.files[0];
-        const Allowed_types = ["image/png", "image/jpeg", "image/jpg", "image/webp"];
-        if (selected && Allowed_types.includes(selected.type)) {
-            let reader = new FileReader();
-            reader.onloadend = () => {
-                setProfileImg(reader.result);
-            };
-            reader.readAsDataURL(selected);
-        }
-    }
+    // const ImageHandler = (e) => {
+    //     const selected = e.target.files[0];
+    //     const Allowed_types = ["image/png", "image/jpeg", "image/jpg", "image/webp"];
+    //     if (selected && Allowed_types.includes(selected.type)) {
+    //         let reader = new FileReader();
+    //         reader.onloadend = () => {
+    //             setProfileImg(reader.result);
+    //         };
+    //         reader.readAsDataURL(selected);
+    //     }
+    // }
 
 
     return (
@@ -91,7 +91,7 @@ export default function Make_info({ setProfileImg }) {
                     </div>
 
 
-                    {header && <Header ImageHandler={ImageHandler} />}
+                    {header && <Header setProfileImg={setProfileImg} />}
                     
 
 

@@ -5,7 +5,7 @@ import { mailValue, selectMail } from "../../Features/Header/MailSlice";
 import { telValue, selectTel } from "../../Features/Header/TelSlice";
 import { addressValue, selectAddress } from "../../Features/Header/AddressSlice";
 
-export default function Header({ ImageHandler }) {
+export default function Header({ setProfileImg }) {
 
     const dispatch = useDispatch();
 
@@ -39,6 +39,17 @@ export default function Header({ ImageHandler }) {
     //     return state.main_image.main_image
     // })
 
+    const ImageHandler = (e) => {
+        const selected = e.target.files[0];
+        const Allowed_types = ["image/png", "image/jpeg", "image/jpg", "image/webp"];
+        if (selected && Allowed_types.includes(selected.type)) {
+            let reader = new FileReader();
+            reader.onloadend = () => {
+                setProfileImg(reader.result);
+            };
+            reader.readAsDataURL(selected);
+        }
+    }
 
     return (
 
