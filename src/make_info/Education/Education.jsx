@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useSelector, useDispatch } from "react-redux";
-import { educationValue, selectEducation } from "../../Features/Education/EducationSlice";
+import { educationDegree, educationUniver, educationYear, selectEducationDegree, selectEducationUniver, selectEducationYear } from "../../Features/Education/EducationSlice";
 
 
 
@@ -10,7 +10,9 @@ export default function Education() {
 
     const [education_div_number, setEducation_div_number] = useState(1);
 
-    const degree = useSelector(selectEducation);
+    const degree = useSelector(selectEducationDegree);
+    const univer = useSelector(selectEducationUniver);
+    const year = useSelector(selectEducationYear);
 
     return (
         <div>
@@ -24,11 +26,24 @@ export default function Education() {
                 <input
                     type="text"
                     value={degree}
-                    onChange={(e) => {dispatch(educationValue(e.target.value))}}
+                    onChange={(e) => { dispatch(educationDegree(e.target.value)) }}
                     placeholder="degree"
                 />
-                <input type="text" placeholder="School/University" />
-                <input type="text" placeholder="years" />
+
+                <input
+                    type="text"
+                    value={univer}
+                    onChange={(e) => { dispatch(educationUniver(e.target.value)) }}
+                    placeholder="School/University"
+                />
+
+                <input
+                    type="text"
+                    value={year}
+                    onChange={(e) => { dispatch(educationYear(e.target.value)) }}
+                    placeholder="years" 
+                />
+
             </div>
             <div className="add_div_block">
                 <button className="add_div">+</button>
