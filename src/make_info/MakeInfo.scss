@@ -12,6 +12,7 @@
         // padding-top: 20px;
         // padding-bottom: 20px;
 
+
         .main_settings_close_div {
             width: 55vw;
             height: 8vh;
@@ -62,5 +63,40 @@
                 }
             }
         }
+
+        .add_button_section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 55vw;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            .add_section {
+                width: 20vw;
+                height: 12vh;
+                background-color: rgb(128, 226, 67);
+                border: 3px rgb(20, 179, 15) solid;
+                font-size: 25px;
+                cursor: pointer;
+            }
+        }
+
+        .add_div_block{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 55vw;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            .add_div{
+                width: 8vw;
+                height: 5vh;
+                background-color: rgb(128, 226, 67);
+                border: 3px rgb(20, 179, 15) solid;
+                font-size: 25px;
+                cursor: pointer;
+            }
+        }
+
     }
 }

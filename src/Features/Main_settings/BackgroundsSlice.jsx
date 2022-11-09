@@ -4,7 +4,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const backgroundsSlice = createSlice({
     name: 'backgrounds',
     initialState: {
-        value: "1"
+        value: "3"
     },
     reducers: {
         backgroundsValue: (state, action) => {

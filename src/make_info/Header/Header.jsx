@@ -15,29 +15,7 @@ export default function Header({ setProfileImg }) {
     const tel = useSelector(selectTel);
     const address = useSelector(selectAddress);
 
-    // const name = useSelector((state) => {
-    //     return state.name.name
-    // });
 
-    // const surname = useSelector((state) => {
-    //     return state.surname.surname
-    // })
-
-    // const mail = useSelector((state) => {
-    //     return state.mail.mail
-    // })
-
-    // const tel = useSelector((state) => {
-    //     return state.tel.tel
-    // })
-
-    // const address = useSelector((state) => {
-    //     return state.address.address
-    // })
-
-    // const main_image = useSelector((state) => {
-    //     return state.main_image.main_image
-    // })
 
     const ImageHandler = (e) => {
         const selected = e.target.files[0];

@@ -3,8 +3,9 @@ import { useState } from 'react';
 import Main_settings from './MainSettings/MainSettings';
 import Header from './Header/Header';
 import Experience from './Experience/Experience';
-import Education from './Education/Education'
+import Education from './Education/Education';
 import Languages from './Languages/Languages';
+import Projects from './Projects/Projects';
 import './MakeInfo.scss';
 
 
@@ -17,49 +18,7 @@ export default function Make_info({ setProfileImg }) {
     const [experience, setExperience] = useState(true);
     const [education, setEducation] = useState(true);
     const [languages, setLanguages] = useState(true);
-
-
-    // const name = useSelector((state) => {
-    //     return state.name.name
-    // });
-
-    // const surname = useSelector((state) => {
-    //     return state.surname.surname
-    // })
-
-    // const mail = useSelector((state) => {
-    //     return state.mail.mail
-    // })
-
-    // const tel = useSelector((state) => {
-    //     return state.tel.tel
-    // })
-
-    // const address = useSelector((state) => {
-    //     return state.address.address
-    // })
-
-    // const main_image = useSelector((state) => {
-    //     return state.main_image.main_image
-    // })
-
-    // const color_background = useSelector((state) => {
-    //     return state.color_background.color_background
-    // })
-
-
-
-    // const ImageHandler = (e) => {
-    //     const selected = e.target.files[0];
-    //     const Allowed_types = ["image/png", "image/jpeg", "image/jpg", "image/webp"];
-    //     if (selected && Allowed_types.includes(selected.type)) {
-    //         let reader = new FileReader();
-    //         reader.onloadend = () => {
-    //             setProfileImg(reader.result);
-    //         };
-    //         reader.readAsDataURL(selected);
-    //     }
-    // }
+    const [projects, setProjects] = useState(true);
 
 
     return (
@@ -95,6 +54,16 @@ export default function Make_info({ setProfileImg }) {
                     
 
 
+                    <div className='main_settings_close_div' onClick={() => {
+                        setEducation(!education);
+                    }}>
+                        <div className='main_settings_title_icon_div'>
+                            <span className='main_settings_title'>Education</span>
+                        </div>
+                    </div>
+
+                    {education && <Education />}
+
 
 
                     <div className='main_settings_close_div' onClick={() => {
@@ -110,18 +79,6 @@ export default function Make_info({ setProfileImg }) {
 
 
                     <div className='main_settings_close_div' onClick={() => {
-                        setEducation(!education);
-                    }}>
-                        <div className='main_settings_title_icon_div'>
-                            <span className='main_settings_title'>Education</span>
-                        </div>
-                    </div>
-
-                    {education && <Education />}
-
-
-
-                    <div className='main_settings_close_div' onClick={() => {
                         setLanguages(!languages);
                     }}>
                         <div className='main_settings_title_icon_div'>
@@ -130,6 +87,18 @@ export default function Make_info({ setProfileImg }) {
                     </div>
 
                     {languages && <Languages />}
+
+
+
+                    <div className='main_settings_close_div' onClick={() => {
+                        setProjects(!projects);
+                    }}>
+                        <div className='main_settings_title_icon_div'>
+                            <span className='main_settings_title'>Projects</span>
+                        </div>
+                    </div>
+
+                    {projects && <Projects />}
 
             </div>
         </div>

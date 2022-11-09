@@ -1,10 +1,15 @@
 
 
 
-export default function Languages(){
-    return(
+export default function Languages() {
+    return (
         <div>
-            Languages
+            <div>
+                Languages
+            </div>
+            <div className="add_button_section">
+                <button className="add_section">+</button>
+            </div>
         </div>
     )
 }
