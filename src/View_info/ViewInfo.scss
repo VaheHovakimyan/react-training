@@ -8,13 +8,12 @@
     border-radius: 4px;
 }
 
+
+
 // SCSS code
 
 .view_info_div {
 
-    // position: fixed;
-    // top: 0%;
-    // left: 55vw;
     .view_info {
         display: flex;
         justify-content: center;
@@ -27,19 +26,29 @@
         top: 0%;
         left: 55vw;
 
-        .view_info_resume_background1 {
-            background-image: url("../Resume_backgrounds/image_1.png");
-            @extend %view_info_resume;
+        .view_info_resume_background_div {
+            width: 35vw;
+            height: 85vh;
+            // background-color: brown;
+            border: 1px black solid;
+            border-radius: 4px;
+
+            // .view_info_resume_background1 {
+            //     background-image: url("../Resume_backgrounds/image_1.png");
+            //     // @extend %view_info_resume;
+            // }
+    
+            // .view_info_resume_background2 {
+            //     background-image: url("../Resume_backgrounds/image_2.png");
+            //     // @extend %view_info_resume;
+            // }
+    
+            // .view_info_resume_background3 {
+            //     background-image: url("../Resume_backgrounds/image_3.png");
+            //     // @extend %view_info_resume;
+            // }
         }
 
-        .view_info_resume_background2 {
-            background-image: url("../Resume_backgrounds/image_2.png");
-            @extend %view_info_resume;
-        }
-
-        .view_info_resume_background3 {
-            background-image: url("../Resume_backgrounds/image_3.png");
-            @extend %view_info_resume;
-        }
+        
     }
 }
