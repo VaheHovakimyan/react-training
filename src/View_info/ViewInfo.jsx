@@ -14,8 +14,8 @@ export default function View_info({ profileImg, setProfileImg }) {
     return (
         <div className='view_info_div'>
             <div className='view_info'>
-                <div className='view_info_resume_background_div' style={{background: `url("../Resume_backgrounds/image_${background_id}.png")`}}>
-                    {/* <div className={`view_info_resume_background${background_id}`}> */}
+                {/* <div className='view_info_resume_background_div' style={{background: `url("../Resume_backgrounds/image_${background_id}.png")`}}> */}
+                    <div className={`view_info_resume_background${background_id}`}>
                         <div>
                             <View_Header
                                 profileImg={profileImg}
@@ -23,8 +23,8 @@ export default function View_info({ profileImg, setProfileImg }) {
                             />
                             <ViewEducation />
                         </div>
-                    {/* </div> */}
-                </div>
+                    </div>
+                {/* </div> */}
             </div>
         </div>
     )

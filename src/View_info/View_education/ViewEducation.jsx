@@ -12,8 +12,8 @@ export default function ViewEducation() {
     return (
         <div>
             <div className="title_section">
-                <div className="title_text">
-                    Education
+                <div className="title_text_div">
+                    <div className="title_text">Education</div>
                 </div>
                 <div className="title_line"></div>
             </div>

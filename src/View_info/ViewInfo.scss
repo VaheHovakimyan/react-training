@@ -26,29 +26,47 @@
         top: 0%;
         left: 55vw;
 
-        .view_info_resume_background_div {
-            width: 35vw;
-            height: 85vh;
-            // background-color: brown;
-            border: 1px black solid;
-            border-radius: 4px;
 
-            // .view_info_resume_background1 {
-            //     background-image: url("../Resume_backgrounds/image_1.png");
-            //     // @extend %view_info_resume;
-            // }
-    
-            // .view_info_resume_background2 {
-            //     background-image: url("../Resume_backgrounds/image_2.png");
-            //     // @extend %view_info_resume;
-            // }
-    
-            // .view_info_resume_background3 {
-            //     background-image: url("../Resume_backgrounds/image_3.png");
-            //     // @extend %view_info_resume;
-            // }
+        .view_info_resume_background1 {
+            background-image: url("../Resume_backgrounds/image_1.png");
+            @extend %view_info_resume;
         }
 
-        
+        .view_info_resume_background2 {
+            background-image: url("../Resume_backgrounds/image_2.png");
+            @extend %view_info_resume;
+        }
+
+        .view_info_resume_background3 {
+            background-image: url("../Resume_backgrounds/image_3.png");
+            @extend %view_info_resume;
+        }
+
+        .title_section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .title_text_div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // padding: 10px;
+                .title_text {
+                    width: 80px;
+                    height: 30px;
+                    background-color: rgb(11, 110, 6);
+                    border-radius: 8px;
+                }
+            }
+
+
+            .title_line {
+                width: 25vw;
+                height: 2px;
+                background-color: #333;
+            }
+        }
+
     }
 }

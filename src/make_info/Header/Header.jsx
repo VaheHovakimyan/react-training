@@ -16,7 +16,6 @@ export default function Header({ setProfileImg }) {
     const address = useSelector(selectAddress);
 
 
-
     const ImageHandler = (e) => {
         const selected = e.target.files[0];
         const Allowed_types = ["image/png", "image/jpeg", "image/jpg", "image/webp"];
