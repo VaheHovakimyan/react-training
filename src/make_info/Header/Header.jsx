@@ -4,6 +4,7 @@ import { surnameValue, selectSurname } from "../../Features/Header/SurnameSlice"
 import { mailValue, selectMail } from "../../Features/Header/MailSlice";
 import { telValue, selectTel } from "../../Features/Header/TelSlice";
 import { addressValue, selectAddress } from "../../Features/Header/AddressSlice";
+import { ImageBorderValue, selectImageBorder } from "../../Features/Header/ImageBorderSlice";
 
 export default function Header({ setProfileImg }) {
 
@@ -14,6 +15,9 @@ export default function Header({ setProfileImg }) {
     const mail = useSelector(selectMail);
     const tel = useSelector(selectTel);
     const address = useSelector(selectAddress);
+    const imageBorder = useSelector(selectImageBorder);
+
+    // console.log(imageBorder);
 
 
     const ImageHandler = (e) => {
@@ -78,6 +82,8 @@ export default function Header({ setProfileImg }) {
             </div>
 
             <input type="file" name="input" id="input" onChange={ImageHandler} />
+
+            <input type="range" name="range" id="range" value={imageBorder} onChange={ (e) => {dispatch(ImageBorderValue(e.target.value))} } />
         </div>
 
     )

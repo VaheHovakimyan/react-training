@@ -4,8 +4,9 @@ import surnameReducer from '../Features/Header/SurnameSlice'
 import mailReducer from '../Features/Header/MailSlice';
 import telReducer from '../Features/Header/TelSlice';
 import addressReducer from '../Features/Header/AddressSlice';
+import ImageBorderReducer from '../Features/Header/ImageBorderSlice';
 import backgroundsReducer from '../Features/Main_settings/BackgroundsSlice';
-import educationReducer from "../Features/Education/EducationSlice";
+import educationReducer  from "../Features/Education/EducationSlice";
 
 
 export const store = configureStore({
@@ -15,6 +16,7 @@ export const store = configureStore({
         mail: mailReducer,
         tel: telReducer,
         address: addressReducer,
+        ImageBorder: ImageBorderReducer,
         backgrounds: backgroundsReducer,
         education: educationReducer,
     },

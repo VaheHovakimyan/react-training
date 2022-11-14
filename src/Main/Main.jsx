@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Make_info from '../Make_info/MakeInfo';
+import Make_info from '../make_info/MakeInfo';
 import View_info from '../View_info/ViewInfo';
 import './Main.scss';
 

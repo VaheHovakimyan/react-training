@@ -46,6 +46,9 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
+            padding: 8px 0px 8px 0px;
+            font-size: 14px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
 
             .title_text_div {
                 display: flex;
@@ -53,17 +56,27 @@
                 align-items: center;
                 // padding: 10px;
                 .title_text {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     width: 80px;
                     height: 30px;
                     background-color: rgb(11, 110, 6);
                     border-radius: 8px;
+                    .title_text_style{
+                        margin: 0;
+                        // text-align: center;
+                        // vertical-align: middle;
+                        // padding: 5px;
+                    }
                 }
             }
 
 
             .title_line {
-                width: 25vw;
+                width: 26vw;
                 height: 2px;
+                border-radius: 16px;
                 background-color: #333;
             }
         }

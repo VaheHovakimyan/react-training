@@ -13,7 +13,7 @@ import './MakeInfo.scss';
 export default function Make_info({ setProfileImg }) {
 
 
-    const [main_settings, setMain_settings] = useState(true);
+    const [main_settings, setMain_settings] = useState(false);
     const [header, setHeader] = useState(true);
     const [experience, setExperience] = useState(true);
     const [education, setEducation] = useState(true);
