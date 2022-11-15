@@ -1,6 +1,14 @@
 // import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { educationYearValue, selectEducationYear } from "../../Features/Education/EducationSlice";
+import {
+    educationDegreeValue,
+    selectEducationDegree,
+    educationUniverValue,
+    selectEducationUniver,
+    educationYearValue,
+    selectEducationYear,
+} from "../../Features/Education/EducationSlice";
+
 
 
 
@@ -8,11 +16,13 @@ export default function Education() {
 
     const dispatch = useDispatch();
 
-    // const [education_div_number,setEducation_div_number] = useState(1);
-
+    const degree = useSelector(selectEducationDegree);
+    const univer = useSelector(selectEducationUniver);
     const year = useSelector(selectEducationYear);
 
-    console.log(year);
+    // const [education_div_number,setEducation_div_number] = useState(1);
+
+
 
     return (
         <div>
@@ -22,26 +32,25 @@ export default function Education() {
             <div>
                 Section 1
             </div>
+
             <div>
-                {/* <input
+
+                <input
                     type="text"
                     value={degree}
-                    onChange={(e) => { dispatch(educationDegree(e.target.value)) }}
-                    placeholder="degree"
+                    onChange={(e) => { dispatch(educationDegreeValue(e.target.value)) }}
                 />
 
                 <input
                     type="text"
                     value={univer}
-                    onChange={(e) => { dispatch(educationUniver(e.target.value)) }}
-                    placeholder="School/University"
-                /> */}
+                    onChange={(e) => { dispatch(educationUniverValue(e.target.value)) }}
+                />
 
                 <input
                     type="text"
                     value={year}
-                    onChange={(e) => {dispatch(educationYearValue(e.target.value))}}
-                    // placeholder="years"
+                    onChange={(e) => { dispatch(educationYearValue(e.target.value)) }}
                 />
 
             </div>

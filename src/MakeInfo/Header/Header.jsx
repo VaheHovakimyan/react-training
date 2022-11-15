@@ -5,6 +5,8 @@ import { mailValue, selectMail } from "../../Features/Header/MailSlice";
 import { telValue, selectTel } from "../../Features/Header/TelSlice";
 import { addressValue, selectAddress } from "../../Features/Header/AddressSlice";
 import { ImageBorderValue, selectImageBorder } from "../../Features/Header/ImageBorderSlice";
+import './Header.scss';
+
 
 export default function Header({ setProfileImg }) {
 
@@ -41,7 +43,7 @@ export default function Header({ setProfileImg }) {
                 <input
                     type="text"
                     value={name}
-                    onChange={(e) => {dispatch(nameValue(e.target.value))}}
+                    onChange={(e) => { dispatch(nameValue(e.target.value)) }}
                 />
             </div>
 
@@ -50,7 +52,7 @@ export default function Header({ setProfileImg }) {
                 <input
                     type="text"
                     value={surname}
-                    onChange={(e) => {dispatch(surnameValue(e.target.value))}}
+                    onChange={(e) => { dispatch(surnameValue(e.target.value)) }}
                 />
             </div>
 
@@ -59,7 +61,7 @@ export default function Header({ setProfileImg }) {
                 <input
                     type="text"
                     value={mail}
-                    onChange={(e) => {dispatch(mailValue(e.target.value))}}
+                    onChange={(e) => { dispatch(mailValue(e.target.value)) }}
                 />
             </div>
 
@@ -68,7 +70,7 @@ export default function Header({ setProfileImg }) {
                 <input
                     type="text"
                     value={tel}
-                    onChange={(e) => {dispatch(telValue(e.target.value))}}
+                    onChange={(e) => { dispatch(telValue(e.target.value)) }}
                 />
             </div>
 
@@ -77,13 +79,21 @@ export default function Header({ setProfileImg }) {
                 <input
                     type="text"
                     value={address}
-                    onChange={(e) => {dispatch(addressValue(e.target.value))}}
+                    onChange={(e) => { dispatch(addressValue(e.target.value)) }}
                 />
             </div>
 
             <input type="file" name="input" id="input" onChange={ImageHandler} />
 
-            <input type="range" name="range" id="range" value={imageBorder} onChange={ (e) => {dispatch(ImageBorderValue(e.target.value))} } />
+            <input
+                type="range"
+                className="image_border_input"
+                min={0}
+                max={100}
+                value={imageBorder}
+                onChange={(e) => { dispatch(ImageBorderValue(e.target.value)) }}
+            />
+             
         </div>
 
     )
