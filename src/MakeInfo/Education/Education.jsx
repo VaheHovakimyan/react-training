@@ -11,7 +11,6 @@ import {
 
 
 
-
 export default function Education() {
 
     const dispatch = useDispatch();
@@ -54,6 +53,8 @@ export default function Education() {
                 />
 
             </div>
+
+
             <div className="add_div_block">
                 <button className="add_div">+</button>
             </div>

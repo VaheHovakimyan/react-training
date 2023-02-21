@@ -4,6 +4,7 @@ import {
     selectEducationUniver,
     selectEducationYear
 } from "../../Features/Education/EducationSlice";
+import { selectColorMain, selectColorText } from "../../Features/Main_settings/ColorMainSlice";
 import './ViewEducation.scss';
 
 
@@ -14,11 +15,17 @@ export default function ViewEducation() {
     const univer = useSelector(selectEducationUniver);
     const year = useSelector(selectEducationYear);
 
+    const colorMain = useSelector(selectColorMain);
+    const colorText = useSelector(selectColorText);
+
     return (
         <div>
             <div className="title_section">
                 <div className="title_text_div">
-                    <div className="title_text"><p className="title_text_style">Education</p></div>
+                    <div className="title_text" style={{
+                        backgroundColor: `${colorMain}`,
+                        color: `${colorText}`
+                    }}><p className="title_text_style">Education</p></div>
                 </div>
                 <div className="title_line"></div>
             </div>

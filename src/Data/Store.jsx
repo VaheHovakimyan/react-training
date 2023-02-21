@@ -6,6 +6,7 @@ import telReducer from '../Features/Header/TelSlice';
 import addressReducer from '../Features/Header/AddressSlice';
 import ImageBorderReducer from '../Features/Header/ImageBorderSlice';
 import backgroundsReducer from '../Features/Main_settings/BackgroundsSlice';
+import colorMainReducer from '../Features/Main_settings/ColorMainSlice';
 import EducationYearReducer from '../Features/Education/EducationSlice';
 
 
@@ -18,6 +19,7 @@ export const store = configureStore({
         address: addressReducer,
         ImageBorder: ImageBorderReducer,
         backgrounds: backgroundsReducer,
+        colorMain: colorMainReducer,
         education: EducationYearReducer,
     },
 });

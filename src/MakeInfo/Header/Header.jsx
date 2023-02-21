@@ -19,7 +19,6 @@ export default function Header({ setProfileImg }) {
     const address = useSelector(selectAddress);
     const imageBorder = useSelector(selectImageBorder);
 
-    // console.log(imageBorder);
 
 
     const ImageHandler = (e) => {
@@ -93,7 +92,16 @@ export default function Header({ setProfileImg }) {
                 value={imageBorder}
                 onChange={(e) => { dispatch(ImageBorderValue(e.target.value)) }}
             />
-             
+
+                <input
+                    type="color"
+                    name="text_color"
+                    id="text_color"
+                    // value={colorText}
+                    // onChange={(e) => { dispatch(colorTextValue(e.target.value)) }}
+                />
+
+
         </div>
 
     )

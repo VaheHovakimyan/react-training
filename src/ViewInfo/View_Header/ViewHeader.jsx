@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import View_name_surname from './View_name_surname/ViewNameSurname.jsx';
 import View_Image_header from './View_Image_header/ViewImageHeader.jsx';
 import View_mail from './View_mail/ViewMail.jsx';
@@ -7,6 +8,8 @@ import './ViewHeader.scss';
 
 
 export default function View_Header({profileImg, setProfileImg}) {
+
+
     return (
         <div className='view_header'>
             <div className='view_header_div'>
